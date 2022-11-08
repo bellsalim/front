@@ -1,0 +1,29 @@
+body{
+  display: block;
+  padding: 0 150px;
+  overflow-x: hidden;
+}
+
+#main{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 50px auto 50px;
+  gap:24px;
+}
+
+#comprovante{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  padding: 30px;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+#background{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#background img{
+  border-radius: 8px;
+}

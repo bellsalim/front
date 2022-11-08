@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coccinelle Theatre</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/6d44882ec6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class ="logo">
+      <h1>Coccinelle Theatre</h1> 
+    </div>
+    
+    <nav>
+      <ul class="menu">
+        <li><a href="#" class="button">Home</a></li>
+        <li><a href="#" class="button">Serviços</a></li>
+        <li><a href="#" class="button">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="main">
+    <article class="calendar">
+      <header>
+        <h2>Agenda</h2>
+        <hr>
+      </header>
+      <ul>
+        <li>
+          <div><span>Setembro</span>Lago dos Cisnes</div>
+          <p><sup>R$</sup>150</p>
+        </li>
+        <hr>
+        <li>
+          <div><span>Outubro</span>Fantasma da Ópera</div>
+          <p><sup>R$</sup>300</p>
+        </li>
+        <hr>
+        <li>
+          <div><span>Novembro</span>A Bela e a Fera</div>
+          <p><sup>R$</sup>300</p>
+        </li>
+        <hr>
+        <li>
+          <div><span>Dezembro</span>Palavra Cantada</div>
+          <p><sup>R$</sup>150</p>
+        </li>
+      </ul>
+      <button id="buy-tickets" class="button">COMPRAR</button>
+    </article>
+
+    <figure class="swiper">
+      <div class="swiper-wrapper">
+        <img src="./assets/swans-lake.jpg" alt="Lago dos Cisnes" class="swiper-slide"></img>
+        <img src="./assets/phantom-of-the-opera.jpg" alt="Fantasma da Ópera" class="swiper-slide"></img>
+        <img src="./assets/beauty-and-the-beast.jpg" alt="A Bela e a Fera"class="swiper-slide"></img>
+        <img src="./assets/palavra-cantada.jpeg" alt="Palavra Cantada" class="swiper-slide"></img>
+      </div>
+    </figure>
+
+    <article class="info">
+      <header>
+        <h2>História do Teatro</h2>
+      </header>
+      <hr>
+      <p> O teatro surgiu na Grécia Antiga, no séc. IX a.C. Consiste em representar uma situação e estimular sentimentos na audiência. A tríade: quem vê, o que se vê e o imaginado é o apoio do drama, pois ele exige uma reflexão propiciada através do ator ou conjunto de atores interpretando uma história.</p>
+    </article>
+  </section>
+
+  <section id="modal">
+    <div class="wrapper">
+      <i class="fas fa-times" id="close-button"></i>
+      <h2>Carrinho</h2>
+
+      <form action="./comprovante.php" method="POST">
+        <fieldset>
+          <legend>Ingressos</legend>
+          <p>
+            <label for="stage-play">Escolha a Peça</label>
+            <select name="stage-play" id="">
+              <option value="swans-lake">Lago dos Cisnes</option>
+              <option value="ghost-opera">Fantasma da Ópera</option>
+              <option value="beauty-beast">A Bela e a Fera</option>
+              <option value="palavra-cantada">Palavra Cantada</option>
+            </select>
+          </p>
+          <p>
+            <label for="qtd">Quantidade</label>
+            <input type="number" name="qtd" min="0" id="">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <p>
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="">
+          </p>
+          <p>
+            <label for="cpf">CPF</label>
+            <input type="number" name="cpf" id="">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Informações do Cartão</legend>
+          <p>
+            <label for="credit-card">N Cartão</label>
+            <input type="number" name="credit-card" id="">
+          </p>
+          <p>
+            <label for="valid-date">Data Validade</label>
+            <input type="date" name="valid" id="" pattern="mm-aaaa">
+          </p>
+          <p>
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" id="">
+          </p>
+        </fieldset>
+        <input class="button" type="submit" value="FINALIZAR PEDIDO">
+      </form>
+    </div>
+  </section>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body> 
+</html>
